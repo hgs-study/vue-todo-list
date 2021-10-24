@@ -10,7 +10,8 @@
 export default {
     methods : {
         clearTodo(){
-            this.$emit('clearAll');
+            // this.$emit('clearAll');
+            this.$store.commit('clearAllItems')
         }
     }
 }
