@@ -23,6 +23,11 @@ export const store = new Vuex.Store({
     state : {
         todoItems : storage.fetch()
     },
+    getters : {
+        storedTodoItems(state){
+            return state.todoItems;
+        }
+    },
     //mutations에서 state 접근 시 this. 가 아닌 state. 로 접근해야한다.
     mutations : {
         addOneItem(state, todoItem){
